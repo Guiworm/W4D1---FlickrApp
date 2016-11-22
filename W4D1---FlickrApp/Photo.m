@@ -7,14 +7,14 @@
 //
 
 #import "Photo.h"
-
 @implementation Photo
-- (instancetype)initWithTitle:(NSString*)title andImage:(UIImage *)image{
-
+- (instancetype)initWithTitle:(NSString*)title andURL:(NSURL*)url andImage:(UIImage *)image
+{
 	self = [super init];
 	if (self) {
 		_title = title;
 		_image = image;
+		_url = url;
 	}
 	return self;
 }

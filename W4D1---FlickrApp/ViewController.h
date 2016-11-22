@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Photo.h"
 #import "MyCollectionViewCell.h"
+#import "DetailViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 
 
 @end

@@ -10,6 +10,8 @@
 
 @interface MyCollectionViewCell ()
 
+
+
 @end
 
 @implementation MyCollectionViewCell

@@ -21,7 +21,7 @@
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-	NSURL *url = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=45b94e6c481a261cbc4d4fadfa6e48d3&tags=cat"]; // 1
+	NSURL *url = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&has_geo=1&format=json&nojsoncallback=1&api_key=45b94e6c481a261cbc4d4fadfa6e48d3&tags=cat"]; // 1
 	NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url]; // 2
 
 	NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration]; // 3
@@ -63,7 +63,7 @@
 			UIImage *urlImage = [UIImage imageWithData: data];
 			
 			Photo *pic = [[Photo alloc]
-						  initWithTitle:photo[@"title"] andImage: urlImage];
+						  initWithTitle:photo[@"title"] andURL:urlParts andImage: urlImage];
 			[photoObjects addObject:pic];
 		}
 		self.photoArray = [photoObjects copy];
@@ -82,11 +82,12 @@
 	CGFloat height = self.view.bounds.size.height/2;
 	CGSize size = CGSizeMake(width, height);
 	
-	layout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
 	layout.itemSize = size;
-
-	
 }
+
+//- (void)reloadItemsAtIndexPaths:(NSArray *)indexPaths{
+//	
+//}
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
 	return 1;
@@ -100,16 +101,19 @@
 	MyCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"MyCell" forIndexPath:indexPath];
 	Photo *photoItem = self.photoArray[indexPath.row];
 	
+	cell.photoObject = photoItem;
 	cell.imageView.image = photoItem.image;
 	cell.titleLabel.text = photoItem.title;
 	
 	return cell;
 }
 
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(MyCollectionViewCell*)sender{
+	DetailViewController *vc = segue.destinationViewController;
+	
+	if([segue.identifier isEqualToString:@"showDetail"]){
+		vc.photo = sender.photoObject;
+	}
 }
-
 
 @end
