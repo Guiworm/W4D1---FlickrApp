@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A0D25F9B1DE4D04E00E45F6D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D25F9A1DE4D04E00E45F6D /* MapKit.framework */; };
 		A0D25F9E1DE4DCF100E45F6D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D25F9D1DE4DCF100E45F6D /* DetailViewController.m */; };
+		A0D25FA11DE557EA00E45F6D /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D25FA01DE557EA00E45F6D /* MapAnnotation.m */; };
 		A0EE8B3C1DE3A63F000B8C5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EE8B3B1DE3A63F000B8C5B /* main.m */; };
 		A0EE8B3F1DE3A63F000B8C5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EE8B3E1DE3A63F000B8C5B /* AppDelegate.m */; };
 		A0EE8B421DE3A63F000B8C5B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EE8B411DE3A63F000B8C5B /* ViewController.m */; };
@@ -23,6 +24,8 @@
 		A0D25F9A1DE4D04E00E45F6D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A0D25F9C1DE4DCF100E45F6D /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A0D25F9D1DE4DCF100E45F6D /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A0D25F9F1DE557EA00E45F6D /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		A0D25FA01DE557EA00E45F6D /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 		A0EE8B371DE3A63F000B8C5B /* W4D1---FlickrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "W4D1---FlickrApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0EE8B3B1DE3A63F000B8C5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0EE8B3D1DE3A63F000B8C5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				A0EE8B521DE3A6E5000B8C5B /* Photo.m */,
 				A0D25F9C1DE4DCF100E45F6D /* DetailViewController.h */,
 				A0D25F9D1DE4DCF100E45F6D /* DetailViewController.m */,
+				A0D25F9F1DE557EA00E45F6D /* MapAnnotation.h */,
+				A0D25FA01DE557EA00E45F6D /* MapAnnotation.m */,
 				A0EE8B431DE3A63F000B8C5B /* Main.storyboard */,
 				A0EE8B461DE3A63F000B8C5B /* Assets.xcassets */,
 				A0EE8B481DE3A63F000B8C5B /* LaunchScreen.storyboard */,
@@ -189,6 +194,7 @@
 				A0EE8B3C1DE3A63F000B8C5B /* main.m in Sources */,
 				A0EE8B5C1DE3CC19000B8C5B /* MyCollectionViewCell.m in Sources */,
 				A0D25F9E1DE4DCF100E45F6D /* DetailViewController.m in Sources */,
+				A0D25FA11DE557EA00E45F6D /* MapAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

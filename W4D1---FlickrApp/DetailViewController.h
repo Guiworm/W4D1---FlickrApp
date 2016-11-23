@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Photo.h"
-
+#import "MapAnnotation.h"
 @interface DetailViewController : UIViewController <UIScrollViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (strong, nonatomic) Photo *photo;

@@ -8,11 +8,12 @@
 
 #import "Photo.h"
 @implementation Photo
-- (instancetype)initWithTitle:(NSString*)title andURL:(NSURL*)url andImage:(UIImage *)image
+- (instancetype)initWithTitle:(NSString*)title andURL:(NSURL*)url andID:(NSString*)picId andImage:(UIImage *)image
 {
 	self = [super init];
 	if (self) {
 		_title = title;
+		_picId = picId;
 		_image = image;
 		_url = url;
 	}

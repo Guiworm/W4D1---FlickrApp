@@ -59,11 +59,11 @@
 
 			NSURL *urlParts = [NSURL URLWithString:[NSString stringWithFormat: @"https://farm%@.staticflickr.com/%@/%@_%@.jpg", farm, serverid, picid, secret]];
 
-			NSData *data = [NSData dataWithContentsOfURL : urlParts];
-			UIImage *urlImage = [UIImage imageWithData: data];
+			NSData *urlPicture = [NSData dataWithContentsOfURL : urlParts];
+			UIImage *urlImage = [UIImage imageWithData: urlPicture];
 			
 			Photo *pic = [[Photo alloc]
-						  initWithTitle:photo[@"title"] andURL:urlParts andImage: urlImage];
+						  initWithTitle:photo[@"title"] andURL:urlParts andID:picid andImage: urlImage];
 			[photoObjects addObject:pic];
 		}
 		self.photoArray = [photoObjects copy];
@@ -82,6 +82,7 @@
 	CGFloat height = self.view.bounds.size.height/2;
 	CGSize size = CGSizeMake(width, height);
 	
+	layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
 	layout.itemSize = size;
 }
 

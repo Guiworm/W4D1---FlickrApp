@@ -13,10 +13,11 @@
 @interface Photo : NSObject
 
 @property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *picId;
 @property (strong, nonatomic) NSURL *url;
-@property (strong, nonatomic) CLLocation *location;
+@property (nonatomic) CLLocationCoordinate2D location;
 @property (strong, nonatomic) UIImage *image;
 
-- (instancetype)initWithTitle:(NSString*)title andURL:(NSURL*)url andImage:(UIImage *)image;
+- (instancetype)initWithTitle:(NSString*)title andURL:(NSURL*)url andID:(NSString*)picId andImage:(UIImage *)image;
 
 @end
